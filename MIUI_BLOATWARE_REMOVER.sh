@@ -1,0 +1,145 @@
+#!/system/bin/sh
+
+echo "Starting test..."
+
+for package in \
+com.google.android.deskclock \
+com.google.android.contactkeys \
+com.miui.mediaeditor \
+com.google.ar.core \
+cn.wps.xiaomi.abroad.lite \
+com.miui.android.fashiongallery \
+com.google.android.apps.googleassistant \
+com.miui.extraphoto \
+com.android.bookmarkprovider \
+com.miui.calculator \
+com.android.calendar \
+com.android.camera \
+com.android.chrome \
+com.android.deskclock \
+com.android.contacts \
+com.android.providers.downloads \
+com.mediatek.duraspeed \
+com.miui.fm \
+com.miui.gallery \
+com.google.android.inputmethod.latin \
+com.google.android.gm \
+com.google.android.apps.nbu.paisa.user \
+com.android.mms \
+com.xiaomi.mi_connect_service \
+com.mint.keyboard \
+com.mipay.wallet.in \
+org.mipay.android.manager \
+com.miui.mishare.connectivity \
+com.miui.player \
+com.miui.notes \
+com.android.incallui \
+com.xiaomi.scanner \
+com.miui.compass \
+com.android.soundrecorder \
+com.miui.screenrecorder \
+com.xiaomi.midrop \
+com.android.thememanager \
+com.android.updater \
+com.miui.miwallpaper \
+com.miui.weather2 \
+com.android.hotwordenrollment.xgoogle \
+com.android.hotwordenrollment.okgoogle \
+com.android.managedprovisioning \
+com.android.ons \
+com.android.providers.calendar \
+com.android.providers.partnerbookmarks \
+com.android.providers.userdictionary \
+com.android.sharedstoragebackup \
+com.android.smspush \
+com.android.stk \
+com.android.theme.font.notoserifsource \
+com.android.traceur \
+com.android.wallpaperbackup \
+com.facebook.appmanager \
+com.facebook.services \
+com.facebook.system \
+com.fido.asm \
+com.fingerprints.sensortesttool \
+com.goodix.gftest \
+com.google.ambient.streaming \
+com.google.android.apps.maps \
+com.google.android.apps.messaging \
+com.google.android.apps.photos \
+com.google.android.apps.restore \
+com.google.android.apps.safetyhub \
+com.google.android.apps.subscriptions.red \
+com.google.android.apps.tachyon \
+com.google.android.apps.turbo \
+com.google.android.apps.wellbeing \
+com.google.android.apps.youtube.music \
+com.google.android.as \
+com.google.android.as.oss \
+com.google.android.cellbroadcastreceiver \
+com.google.android.cellbroadcastservice \
+com.google.android.feedback \
+com.google.android.gms.location.history \
+com.google.android.gms.supervision \
+com.google.android.googlequicksearchbox \
+com.google.android.ims \
+com.google.android.marvin.talkback \
+com.google.android.onetimeinitializer \
+com.google.android.partnersetup \
+com.google.android.printservice.recommendation \
+com.google.android.projection.gearhead \
+com.google.android.syncadapters.calendar \
+com.google.android.tts \
+com.google.android.videos \
+com.google.android.youtube \
+com.xiaomi.calendar \
+com.xiaomi.glgm \
+com.xiaomi.xmsf \
+com.xiaomi.xmsfkeeper \
+com.xiaomi.mipicks \
+com.xiaomi.mircs \
+com.xiaomi.mtb \
+com.xiaomi.payment \
+com.xiaomi.simactivate.service \
+com.qti.xdivert \
+com.qti.service.colorservice \
+com.qualcomm.atfwd \
+com.qualcomm.embms \
+com.qualcomm.qti.cne \
+com.qualcomm.qti.dynamicddsservice \
+com.qualcomm.qti.lpa \
+com.qualcomm.qti.remoteSimlockAuth \
+com.qualcomm.qti.uceShimService \
+com.qualcomm.qti.uim \
+com.qualcomm.qti.uimGbaApp \
+com.qualcomm.location \
+com.qualcomm.uimremoteclient \
+com.qualcomm.uimremoteserver \
+com.quicinc.voice.activation \
+com.longcheertel.AutoTest \
+com.longcheertel.cit \
+com.longcheertel.sarauth \
+com.mi.globalbrowser \
+com.mi.globalminusscreen \
+com.miui.analytics \
+com.miui.audioeffect \
+com.miui.audiomonitor \
+com.miui.backup \
+com.miui.bugreport \
+com.miui.cleaner \
+com.miui.cloudbackup \
+com.miui.cloudservice \
+com.miui.daemon \
+com.miui.global.packageinstaller \
+com.miui.micloudsync \
+com.miui.miservice \
+com.miui.msa.global \
+com.miui.phrase \
+com.miui.yellowpage \
+org.ifaa.aidl.manager
+do
+    echo "Uninstalling: $package"
+    adb shell pm uninstall -k --user 0 "$package"
+    echo "✓ Removed: $package"
+done
+
+echo "All done!"
