@@ -89,3 +89,62 @@ Explanation of Each Component
     -k: Keeps the app's data and cache.
     --user 0: Targets the primary user (user ID 0).
     "$package": Placeholder for the package name of the application to uninstall.
+
+
+
+Running a .sh File
+
+To run a .sh (shell script) file, you need to follow these steps, which can vary slightly depending on your operating system. Below are the instructions for both Linux and macOS, as well as Windows (using WSL or Git Bash).
+For Linux and macOS
+
+    Open Terminal: You can find the Terminal application in your applications menu or by searching for it.
+
+    Navigate to the Directory: Use the cd command to change to the directory where your .sh file is located. For example:
+
+bash
+
+cd /path/to/your/script
+
+Make the Script Executable: If the script is not already executable, you can make it executable with the following command:
+
+bash
+
+chmod +x your_script.sh
+
+Run the Script: You can run the script by typing:
+
+bash
+
+    ./your_script.sh
+
+For Windows (Using WSL or Git Bash)
+
+    Open WSL or Git Bash: If you have Windows Subsystem for Linux (WSL) or Git Bash installed, open it.
+
+    Navigate to the Directory: Use the cd command to go to the directory where your .sh file is located:
+
+bash
+
+cd /path/to/your/script
+
+Make the Script Executable: If necessary, make the script executable:
+
+bash
+
+chmod +x your_script.sh
+
+Run the Script: Execute the script with:
+
+bash
+
+    ./your_script.sh
+
+Additional Notes
+
+    If you encounter a "Permission denied" error, ensure that you have made the script executable using chmod +x.
+    If the script requires superuser permissions, you can run it with sudo:
+
+bash
+
+sudo ./your_script.sh
+
