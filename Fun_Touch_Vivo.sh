@@ -88,7 +88,6 @@ com.vivo.pushservice \
 com.vivo.safecentercom.vivo.scanner \
 com.vivo.setupwizard \
 com.vivo.sim.contacts \
-com.vivo.smartmultiwindow \
 com.vivo.smartshot \
 com.vivo.translator \
 com.vivo.unionpay \
