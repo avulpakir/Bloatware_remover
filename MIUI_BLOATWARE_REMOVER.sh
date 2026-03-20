@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/usr/bin/env bash
 
 echo "Starting test..."
 
@@ -135,7 +135,8 @@ com.miui.miservice \
 com.miui.msa.global \
 com.miui.phrase \
 com.miui.yellowpage \
-org.ifaa.aidl.manager
+org.ifaa.aidl.manager \
+com.mi.android.globalFileexplorer
 do
     echo "Uninstalling: $package"
     adb shell pm uninstall -k --user 0 "$package"
